@@ -1,21 +1,39 @@
 import random
 
+playerCHR = 0
+
+playerCHR = int(input('''
+Select a Warrior:
+1: Knigth | Basic character. Has low spell DMG but high physical DMG.
+2: Priest | Follower of the flesh god, has faith based spells and attacks.
+3: Ocultist | Spell caster. Focuses on mostly casting spells, but has low defence.
+
+Selection: '''))
+
+if playerCHR == 1:
+    manaM = 50
+    playerDEF = 2
+    weaponDMG = 15
+    
+
 playerHP = 100
 weaponDMG = 10
 mana = 100
 manaM = 100
 playerDEF = 1
 playerMHP = 100
+playerHEAL = 0
 cost = 1
+magicDMG = 1
 
-item1 = 'Small healing potion'
-item2 = 'Small healing potion'
-item3 = 'Large healing potion'
-item4 = 'Large healing potion'
-item5 = 'Small mana potion'
-item6 = 'Large mana potion'
-item7 = 'Berserker brew'
-item8 = 'Sacrificial Dagger'
+item1 = 'Small healing potion | Heals a small amount of health'
+item2 = 'Small healing potion | Heals a small amount of health'
+item3 = 'Large healing potion | Heals a large amount of health'
+item4 = 'Large healing potion | Heals a large amount of health'
+item5 = 'Small mana potion | Heals a small amount of mana'
+item6 = 'Large mana potion | Heals a large amount of mana'
+item7 = 'Berserker brew | makes you deal more physical DMG, in exchange for defence'
+item8 = 'Sacrificial Dagger | Deals half of your current health in DMG, while making you much stronger. Makes the gods happy'
 
 itemC = 0
 
@@ -39,7 +57,8 @@ while enemyHP > 0 or playerHP > 0:
         playerHP = playerMHP
     if mana > manaM:
         mana = manaM
-    print(f'''YOUR HEALTH: {playerHP}/{playerMHP} | YOUR MANA: {mana}/{manaM}
+    print(f'''
+YOUR HEALTH: {playerHP}/{playerMHP} | YOUR MANA: {mana}/{manaM}
 SLIME: {enemyHP}''')
     action = int(input('''
 ATTACK: 1
@@ -51,25 +70,28 @@ RECHARGE: 4
         enemyHP += -1*(weaponDMG * (random.uniform(0.6, 1.2))//1)
     elif action == 2:
         spell = int(input('''
-FIREBALL: 1 | COST: 25
-ELECTRIC BOLT: 2 | COST: 10
-HEAL: 3 | COST: 30
-RETURN: 4 
+FIREBALL: 1 | COST: 25 | Red fire magic, does a large amount of DMG
+ELECTRIC BOLT: 2 | COST: 10 | Yellow electric magic, does a small amount of DMG but can stun the enemy
+HEAL: 3 | COST: 30 | Green nature magic, heals HP
 '''))
         if spell == 1 and mana >= 20:
-            enemyHP += -1*( 20 * random.uniform(0.4, 1.2)//1)
+            enemyHP += -1*( 15 * random.uniform(0.8, 1.2)//1) * magicDMG
             mana += -25
         elif spell ==  2 and mana >=  10:
-            enemyHP += -1*( 5 * random.uniform(0.6, 1.5)//1 + 2)
+            enemyHP += -1*( 5 * random.uniform(0.6, 1.5)//1 + 2) * magicDMG
             mana += -10 * cost
             stunCHN = random.uniform(0.0, 1.5)
             if stunCHN >= 0.9 and stunCHN < 1.4:
                 enemySTN += 2
             elif stunCHN >= 1.4:
-                pass
+                enemySTN += 4
             
         elif spell == 3 and mana >= 30 and playerHP < playerMHP:
-            playerHP += ( 10 * random.uniform(0.5, 2)//1)
+            playerHEAL = ( 16 * random.uniform(1, 2)//1)  * magicDMG//2
+            print(f'''
+You healed {playerHEAL} HP.
+''')
+            playerHP += playerHEAL
             mana += -30 * cost
         elif spell == 1 and mana < 20:
             print('''
@@ -136,7 +158,8 @@ The {item6} was used up.
 ''')
             item6 = '* EMPTY *'
         if itemC == 7 and item7 != '* EMPTY *':
-            playerHP += 40
+            weaponDMG = weaponDMG * 1.5
+            playerDEF -= 2
             print(f'''
 The {item7} was used up.
 ''')
@@ -144,8 +167,9 @@ The {item7} was used up.
         if itemC == 8 and item8 != '* EMPTY *':
             playerHP -= playerHP//2
             weaponDMG = weaponDMG * 2
+            magicDMG = magicDMG * 2
             print(f'''
-The dagger pierces your flesh. the gods accept your blood, your damage has been doubled.
+The dagger pierces your flesh. the gods accept your blood, you feel much stronger.
 ''')
 
     elif action == 4:
@@ -177,10 +201,32 @@ The Slime charged at you, dealing {enemyATK} damage.
 The Slime regenerated, healing {enemyATK} health.
 ''')
     elif enemySTN != 0:
-        print('''
-The Slime was stunned, it's turn was skipped.
+        print(f'''
+The Slime was stunned, it's turn was skipped. it's stun will last for {enemySTN -1} more turns.
 ''')
         enemySTN -= 1
+
+
+
+    if playerHP <= 0:
+        if mana > manaM:
+            mana = manaM
+        print(f'''YOUR HEALTH: {playerHP}/{playerMHP} | YOUR MANA: {mana}/{manaM}
+SLIME: {enemyHP}''')
+        print('''
+The gods look down uppon your failure. You have perished and will soon be forgoten.
+''')
+        break
+
+    if enemyHP <= 0:
+        if mana > manaM:
+            mana = manaM
+        print(f'''YOUR HEALTH: {playerHP}/{playerMHP} | YOUR MANA: {mana}/{manaM}
+SLIME: {enemyHP}''')
+        print('''
+As you deal the final blow to the creature, you feel like the gods are smiling upon you. You have succeded, but the quest continues.
+''')
+        break
 
     
 
