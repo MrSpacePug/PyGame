@@ -2,8 +2,22 @@
 frozen blood: 1.5 dmg on red spells
 wilted leaf: 1.5 dmg on green spells
 thunder in a jar: 1.5 dmg on yellow spells
-burning head: 1.5 dmg on orange spells
+ashen head: 1.5 dmg on orange spells
 inner eye: 1.5 dmg on purple spells
 
 crimson crufix: faith is earned at 2x the rate and is twice as efective, but drains every turn
 corrupted heart: while corrupted, you gain regeneration and max hp, but mana is drained every turn and if your faith goes positive, you take damage until it is negative again
+gamblers dagger: physical attacks may have a dmg multiplier rangeing from 0x to 2.5x
+glass heart: no longer suffer self DMG, but if you use healing, lose 50% of max hp. 
+locust head: weapon DMG x 2
+
+corrupted glass: while in possesion, lose 10% of max mana. when 3 are obtained, consume them to make a powerfull item
+
+soul jar: you may revive once. breaks when you perish
+sacred heart: gain regeneration and mana regeneration, if Faith goes negative, breaks.
+dagger of the flesh god: sacrificial dagger no longer buffs magic DMG, instead, buffs physical DMG further and costs 25% of hp instead.
+blood river: 3x dmg on red spells
+wilted leaf: 3x dmg on green spells
+thunder in a jar: 3x dmg on yellow spells
+ashen head: 3x dmg on orange spells
+inner eye: 3x dmg on purple spells
