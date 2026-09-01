@@ -16,8 +16,13 @@ corrupted glass: while in possesion, lose 10% of max mana. when 3 are obtained, 
 soul jar: you may revive once. breaks when you perish
 sacred heart: gain regeneration and mana regeneration, if Faith goes negative, breaks.
 dagger of the flesh god: sacrificial dagger no longer buffs magic DMG, instead, buffs physical DMG further and costs 25% of hp instead.
-blood river: 3x dmg on red spells
-wilted leaf: 3x dmg on green spells
-thunder in a jar: 3x dmg on yellow spells
-ashen head: 3x dmg on orange spells
-inner eye: 3x dmg on purple spells
+
+
+blood river: 3x dmg on red spells, red spells now have lifesteal
+leaf: 3x dmg on green spells and cost half
+unleashed thunder: 3x dmg on yellow spells, stuns last longer
+burning skull: 3x dmg on orange spells, orange spells may inflict burn, making physical DMG more effective
+true eye: 3x dmg on purple spells, lower your Faith even further
+
+false divinity: spells cost 2x mana, no longer heal post combat
+godhood: spells no longer cost mana, hp is now un-capped. No longer heal after combat
