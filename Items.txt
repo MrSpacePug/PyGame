@@ -10,19 +10,35 @@ corrupted heart: while corrupted, you gain regeneration and max hp, but mana is 
 gamblers dagger: physical attacks may have a dmg multiplier rangeing from 0x to 2.5x
 glass heart: no longer suffer self DMG, but if you use healing, lose 50% of max hp. 
 locust head: weapon DMG x 2
+inferno's gambit: gives acess to a new orange spell that has a 30% percent chance to hit, if so, insta-kills the enemy while costing 60% of your hp
+good nights sleep: if recharging while at full mana, your next attack deals double DMG
+sleeping gown: take half DMG while recharging
+rose thorns: your basic attack now has a chance to inflict poison on the enemy when hit
+
+spells of the flesh: gives acess to 4 new red spells
+spells of the thorns: gives acess to 4 new green spells
+spells of the storm: gives acess to 4 new yellow spells
+spells of the inferno: gives acess to 4 new orange spells
+spells of the depths: gives acess to 4 new purple spells
+way of the warrior: gives acess to 2 new white spells
+way of the warrior pt.II: gives acess to 2 new white spells
 
 corrupted glass: while in possesion, lose 10% of max mana. when 3 are obtained, consume them to make a powerfull item
 
 soul jar: you may revive once. breaks when you perish
 sacred heart: gain regeneration and mana regeneration, if Faith goes negative, breaks.
 dagger of the flesh god: sacrificial dagger no longer buffs magic DMG, instead, buffs physical DMG further and costs 25% of hp instead.
-
+glass ring: spells can no longer miss and always hit for max DMG, but if your hp goes under 50%, breaks.
+mirror mirror: while recharging, reflect any hit at 75% strength. 
+betrayal: every time you are hit, take a third of the DMG in faith instead. breaks when affected by the divine
+dream eater: when recharging, heal hp instead of mana. breaks if mana goes to 0
+blessing of the depths: while corrupted, any status effects you apply are doubled. any status effects aplied against you are also doubled
 
 blood river: 3x dmg on red spells, red spells now have lifesteal
 leaf: 3x dmg on green spells and cost half
 unleashed thunder: 3x dmg on yellow spells, stuns last longer
 burning skull: 3x dmg on orange spells, orange spells may inflict burn, making physical DMG more effective
-true eye: 3x dmg on purple spells, lower your Faith even further
+eye of the ocult: 3x dmg on purple spells, lower your Faith even further
 
 false divinity: spells cost 2x mana, no longer heal post combat
-godhood: spells no longer cost mana, hp is now un-capped. No longer heal after combat
+divinity: spells no longer cost mana, hp is now un-capped. No longer heal after combat
