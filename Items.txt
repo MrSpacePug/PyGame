@@ -33,6 +33,7 @@ mirror mirror: while recharging, reflect any hit at 75% strength.
 betrayal: every time you are hit, take a third of the DMG in faith instead. breaks when affected by the divine
 dream eater: when recharging, heal hp instead of mana. breaks if mana goes to 0
 blessing of the depths: while corrupted, any status effects you apply are doubled. any status effects aplied against you are also doubled
+corrupt mind: you are perpetualy corrupted. corruption no longer doubles mana cost. you take double DMG and breaks when affected by the divine.
 
 blood river: 3x dmg on red spells, red spells now have lifesteal
 leaf: 3x dmg on green spells and cost half
