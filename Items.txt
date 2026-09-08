@@ -1,19 +1,22 @@
 
-frozen blood: 1.5 dmg on red spells
-wilted leaf: 1.5 dmg on green spells
-thunder in a jar: 1.5 dmg on yellow spells
-ashen head: 1.5 dmg on orange spells
-inner eye: 1.5 dmg on purple spells
+frozen blood: 1.2x dmg on red spells
+wilted leaf: 1.2x dmg on green spells
+thunder in a jar: 1.2x dmg on yellow spells
+ashen head: 1.2x dmg on orange spells
+inner eye: 1.2x dmg on purple spells
 
 crimson crufix: faith is earned at 2x the rate and is twice as efective, but drains every turn
 corrupted heart: while corrupted, you gain regeneration and max hp, but mana is drained every turn and if your faith goes positive, you take damage until it is negative again
 gamblers dagger: physical attacks may have a dmg multiplier rangeing from 0x to 2.5x
 glass heart: no longer suffer self DMG, but if you use healing, lose 50% of max hp. 
 locust head: weapon DMG x 2
-inferno's gambit: gives acess to a new orange spell that has a 30% percent chance to hit, if so, insta-kills the enemy while costing 60% of your hp
+Rath'Thiel's gambit: gives acess to a new orange spell that has a 30% percent chance to hit, if so, insta-kills the enemy while costing 60% of your hp
 good nights sleep: if recharging while at full mana, your next attack deals double DMG
 sleeping gown: take half DMG while recharging
 rose thorns: your basic attack now has a chance to inflict poison on the enemy when hit
+wetstone: your basic attack may now inflict bleed. Bleeding enemies take more DMG and cannot heal.
+Nash'Thiel's hunger: you gain life-steal from bleeding enemies.
+
 
 spells of the flesh: gives acess to 4 new red spells
 spells of the thorns: gives acess to 4 new green spells
@@ -34,9 +37,11 @@ betrayal: every time you are hit, take a third of the DMG in faith instead. brea
 dream eater: when recharging, heal hp instead of mana. breaks if mana goes to 0
 blessing of the depths: while corrupted, any status effects you apply are doubled. any status effects aplied against you are also doubled
 corrupt mind: you are perpetualy corrupted. corruption no longer doubles mana cost. you take double DMG and breaks when affected by the divine.
+glass sachel: gives you acess to any non-glass item, shatters after used.
 
-blood river: 3x dmg on red spells, red spells now have lifesteal
-leaf: 3x dmg on green spells and half cost
-unleashed thunder: 3x dmg on yellow spells, stuns last longer
-burning skull: 3x dmg on orange spells, orange spells may inflict burn, making physical DMG more effective
-eye of the ocult: 3x dmg on purple spells, lower your Faith even further
+
+blood river: 1.5x dmg on red spells, red spells now have lifesteal
+leaf: 1.5x dmg on green spells and half cost
+unleashed thunder: 1.5x dmg on yellow spells, stuns last longer
+burning skull: 1.5x dmg on orange spells, orange spells may inflict burn, making physical DMG more effective
+eye of the ocult: 1.5x dmg on purple spells, lower your Faith even further
