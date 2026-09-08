@@ -36,10 +36,7 @@ blessing of the depths: while corrupted, any status effects you apply are double
 corrupt mind: you are perpetualy corrupted. corruption no longer doubles mana cost. you take double DMG and breaks when affected by the divine.
 
 blood river: 3x dmg on red spells, red spells now have lifesteal
-leaf: 3x dmg on green spells and cost half
+leaf: 3x dmg on green spells and half cost
 unleashed thunder: 3x dmg on yellow spells, stuns last longer
 burning skull: 3x dmg on orange spells, orange spells may inflict burn, making physical DMG more effective
 eye of the ocult: 3x dmg on purple spells, lower your Faith even further
-
-false divinity: spells cost 2x mana, no longer heal post combat
-divinity: spells no longer cost mana, hp is now un-capped. No longer heal after combat
