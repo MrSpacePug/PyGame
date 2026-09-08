@@ -15,7 +15,56 @@ playerFAI = 0
 playerNM = 'NAMELESS ONE'
 playerLVL = 1
 corrupted = True
+itemC1 = 0
+itemC2 = 0 
+itemC3 = 0
 
+#Passive Items ID
+
+Fblood = 0
+Wleaf = 1
+Jthunder = 2
+Ahead = 3
+Ieye = 4
+Ccrucifix = 4
+Cheart = 5
+Gdagger = 6
+Gheart = 7
+Lhead = 8
+RTgambit = 9
+Gsleep = 10
+Sgown = 11
+Rthorns = 12
+Wstone = 13
+NThunger = 14
+
+#Basic tomes ID
+
+BKflesh = 15
+BKthorns = 16
+BKinferno = 17
+BKdepths = 18
+WWI = 19
+WWII = 20
+
+#Glass items ID
+
+Cglass = 21
+Sjar = 22
+Sheart = 23
+DGflesh = 24
+Gring = 25
+Mmirror = 26
+Obetrayal = 27
+Deater = 28
+Bdepths = 29
+Cmind = 30
+Gsachel = 31
+Rblood = 32
+leaf = 33
+Uthunder = 34
+Bskull = 35
+Oeye = 36
 
 playerCHR = int(input('''
 Select a Warrior:
@@ -61,6 +110,19 @@ if playerCHR == 3:
     playerNM = 'OCULTIST'
     playerFAI = 100
     cost = 1
+    corrupted = False
+
+if playerCHR == 777:
+    playerMHP = 999
+    playerHP = 999
+    magicDMG = 999
+    manaM = 999
+    mana = 999
+    weaponDMG = 999
+    playerDEF = 999
+    playerNM = 'DEBUG'
+    playerFAI = 999
+    cost = 0
     corrupted = False
     
 
@@ -382,7 +444,7 @@ GOLEM: {enemyHP}''')
 As you deal the final blow to the creature, you feel the abyss in your soul expand. You have succeded, but the quest continues.
 ''')
         
-        choiceLVL = int(input(f'''
+    choiceLVL = int(input(f'''
 --- CHOSE A LEVEL UP REWARD ---
 
 1: MAX HP UP
@@ -390,20 +452,64 @@ As you deal the final blow to the creature, you feel the abyss in your soul expa
 3: WEAPON UPGRADE
 4: RANDOM PASSIVE ITEM
 
---------------------------------
 '''))
-        if choiceLVL == 1:
-            playerMHP += 30 * playerLVL
-        elif choiceLVL == 2:
-            manaM += 50 * playerLVL
-        elif choiceLVL == 3:
-            weaponDMG += random.randint(2,4)* playerLVL
-        elif choiceLVL == 4:
+    if choiceLVL == 1:
+        playerMHP += 30 * playerLVL
+    elif choiceLVL == 2:
+        manaM += 50 * playerLVL
+    elif choiceLVL == 3:
+        weaponDMG += random.randint(2,4)* playerLVL
+    elif choiceLVL == 4 and :
+        itemC1 = random.randint(1,38)
+        itemC2 = random.randint(1,38)
+        itemC3 = random.randint(1,38)
+        itemCT = int(input(f"""
+CHOSE AN ITEM:
+
+1:{itemC1}
+2:{itemC2}
+3:{itemC3}
+4: Corrupted Glass
+"""))
+        if itemCT == 4:
+            Cglass += 1
+            print(f"""
+From the choices laid in front of you, you pick a small dark glass shard. You have {Cglass} out of 3 corrupted glass shards.
+
+""")
+    elif choiceLVL == 4 and Cglass >= 3:
+        itemCT = int(input(f"""
+CHOSE AN ITEM:
+
+1:{itemC1}
+2:{itemC2}
+3:{itemC3}
+4: Corrupted Glass
+5: Glass Crafting
+"""))
+        if itemCT == 4:
+            Cglass += 1
+            print(f"""
+From the choices laid in front of you, you pick a small dark glass shard. You have {Cglass} out of 3 corrupted glass shards.
+
+""")
+        elif itemCT == 5:
+            Cglass -= 3
+            itemC1 = random.randint(21,35)
+            itemC2 = random.randint(21,35)
+            itemC3 = random.randint(21,35)
+            itemCT = int(input(f"""
+CHOSE AN ITEM:
+
+1:{itemC1}
+2:{itemC2}
+3:{itemC3}
+4: Corrupted Glass
+5: Glass Crafting
+"""))
             
-
-
-
-
+        
+        
 
 
 
