@@ -1,2 +1,19 @@
-cenario 1: traveler of mekeke'rena
-your travels take you to one of the few forests
+cenario 1: traveler of makeke'rena
+"your travels take you to one of the few forests in Thar'eke, makeke'rena. you are stoped by an old man. He asks you:
+"Tell me young one, are you of Thiel?""
+the player is prompted to anwser yes or no.
+if yes is choosen:
+"the old man shakes his head in disgust, and replies: "Then you are not welcome in makeke'rena, keep of mak'thar." You walk away, never to come back."
+if no is choosen:
+"The old man looks at you and smiles warmly. he replies "Welcome, then, may mak'thar bless you." the man ushers you foward into makeke'rena.
+as you walk around the tribe, you spot a scholarly man, sat infront of a tent. You aproach him slowly, he spots you and asks:
+"You, how may I help you?""
+the player is prompted with four awnsers: "what is Thiel?", "where am I", "who are you" and "you may not."
+if awnserd with "what is Thiel?":
+"the man looks at you puzzled and replies "well, Thiel isn't as much of a thing as it is a clan. The Thiels. some of the first make'thars come from them" he looks at you for a second, confused and continues
+"they aren't allowed here due to a great transgretion on the part of one of the Thiels." you nod and move on."
+if awnsered "where am I":
+"the man stands up and says "You are in makeke'rena, one of the greatest civilisations of Thar'eke. We are defended by mak'thar itself. feel free to stay for as long as you want." he extends his hand, expecting you to shake it. The man then shows you to an old tent and says "feel free to stay for as long as you want, and may mak'thar bless you.". You leave the next morning without talking to anyone."
+if awnsered "who are you":
+"the man stands up and starts talking "My name is Eke'Asto, son of Yeno'Asto, son of Ato'Aste the tainted, daugther of Mak'Asto make'thar of mak'thar. I am ezo'nash of the Aste clan. I welcome you into the Aste's home."
+the man then 
