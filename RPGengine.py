@@ -66,6 +66,54 @@ Uthunder = 34
 Bskull = 35
 Oeye = 36
 
+#Item Amounts
+#Passive Items
+
+AFblood = 0
+AWleaf = 0
+AJthunder = 0
+AAhead = 0
+AIeye = 0
+ACcrucifix = 0
+ACheart = 0
+AGdagger = 0
+AGheart = 0
+ALhead = 0
+ARTgambit = 0
+AGsleep = 0
+ASgown = 0
+ARthorns = 0
+AWstone = 0
+ANThunger = 0
+
+#Basic tomes
+
+ABKflesh = 0
+ABKthorns = 0
+ABKinferno = 0
+ABKdepths = 0
+AWWI = 0
+AWWII = 00
+
+#Glass items
+
+ACglass = 0
+ASjar = 0
+ASheart = 0
+ADGflesh = 0
+AGring = 0
+AMmirror = 0
+AObetrayal = 0
+ADeater = 0
+ABdepths = 0
+ACmind = 0
+AGsachel = 0
+ARblood = 0
+Aleaf = 0
+AUthunder = 0
+ABskull = 0
+AOeye = 0
+
 playerCHR = int(input('''
 Select a Warrior:
 1: Knigth | Basic character. Has low spell DMG but high physical DMG.
@@ -115,16 +163,29 @@ if playerCHR == 3:
 if playerCHR == 777:
     playerMHP = 999
     playerHP = 999
-    magicDMG = 999
-    manaM = 999
-    mana = 999
-    weaponDMG = 999
+    magicDMG = 9999999999999
+    manaM = 999999
+    mana = 999999
+    weaponDMG = 99999999999999
     playerDEF = 999
     playerNM = 'DEBUG'
     playerFAI = 999
     cost = 0
     corrupted = False
-    
+
+
+def enemy(a,b,c,d,e,f):
+    for i in range(1):
+        enemyMHP = a
+        enemyNM = b
+        enemyDEF = c
+        enemyATK = d
+        enemyCres = e
+        enemyCweak = f
+        return enemyMHP, enemyNM
+
+
+
 
 
 item1 = 'Small healing potion | Heals a small amount of health'
@@ -138,10 +199,18 @@ item8 = 'Sacrificial Dagger | Deals half of your current health in DMG, while ma
 
 itemC = 0
 
-
+enemyMHP = 0
+enemyNM = 0
+enemyDEF = 0
+enemyATK = 0
+enemyCres = 0
+enemyCweak = 0
 enemyHP = 250
 enemyMHP = 250
 enemySTN = 0
+
+enemy(250,'Golem',1,10,0,0)
+print(enemyNM)
 
 action = 0
 actionE = 0
@@ -443,6 +512,9 @@ GOLEM: {enemyHP}''')
         print('''
 As you deal the final blow to the creature, you feel the abyss in your soul expand. You have succeded, but the quest continues.
 ''')
+
+    enemyMHP += 10 * playerLVL
+    enemyHP = enemyMHP
         
     choiceLVL = int(input(f'''
 --- CHOSE A LEVEL UP REWARD ---
@@ -455,11 +527,17 @@ As you deal the final blow to the creature, you feel the abyss in your soul expa
 '''))
     if choiceLVL == 1:
         playerMHP += 30 * playerLVL
+        playerHP = playerMHP
+        mana = manaM
     elif choiceLVL == 2:
         manaM += 50 * playerLVL
+        playerHP = playerMHP
+        mana = manaM
     elif choiceLVL == 3:
         weaponDMG += random.randint(2,4)* playerLVL
-    elif choiceLVL == 4 and :
+        playerHP = playerMHP
+        mana = manaM
+    elif choiceLVL == 4:
         itemC1 = random.randint(1,38)
         itemC2 = random.randint(1,38)
         itemC3 = random.randint(1,38)
@@ -472,12 +550,12 @@ CHOSE AN ITEM:
 4: Corrupted Glass
 """))
         if itemCT == 4:
-            Cglass += 1
+            ACglass += 1
             print(f"""
-From the choices laid in front of you, you pick a small dark glass shard. You have {Cglass} out of 3 corrupted glass shards.
+From the choices laid in front of you, you pick a small dark glass shard. You have {ACglass} out of 3 corrupted glass shards.
 
 """)
-    elif choiceLVL == 4 and Cglass >= 3:
+    elif choiceLVL == 4 and ACglass >= 3:
         itemCT = int(input(f"""
 CHOSE AN ITEM:
 
@@ -488,13 +566,13 @@ CHOSE AN ITEM:
 5: Glass Crafting
 """))
         if itemCT == 4:
-            Cglass += 1
+            ACglass += 1
             print(f"""
-From the choices laid in front of you, you pick a small dark glass shard. You have {Cglass} out of 3 corrupted glass shards.
+From the choices laid in front of you, you pick a small dark glass shard. You have {ACglass} out of 3 corrupted glass shards.
 
 """)
         elif itemCT == 5:
-            Cglass -= 3
+            ACglass -= 3
             itemC1 = random.randint(21,35)
             itemC2 = random.randint(21,35)
             itemC3 = random.randint(21,35)
@@ -504,8 +582,6 @@ CHOSE AN ITEM:
 1:{itemC1}
 2:{itemC2}
 3:{itemC3}
-4: Corrupted Glass
-5: Glass Crafting
 """))
             
         
